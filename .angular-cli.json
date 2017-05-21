@@ -1,57 +1,69 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "project": {
-    "name": "sgi.ctm.finances.ng.frontend"
-  },
-  "apps": [
-    {
-      "root": "src",
-      "outDir": "dist",
-      "assets": [
-        "assets",
-        "favicon.ico"
-      ],
-      "index": "index.html",
-      "main": "main.ts",
-      "polyfills": "polyfills.ts",
-      "test": "test.ts",
-      "tsconfig": "tsconfig.app.json",
-      "testTsconfig": "tsconfig.spec.json",
-      "prefix": "app",
-      "styles": [
-        "styles.css"
-      ],
-      "scripts": [],
-      "environmentSource": "environments/environment.ts",
-      "environments": {
-        "dev": "environments/environment.ts",
-        "prod": "environments/environment.prod.ts"
-      }
-    }
-  ],
-  "e2e": {
-    "protractor": {
-      "config": "./protractor.conf.js"
-    }
-  },
-  "lint": [
-    {
-      "project": "src/tsconfig.app.json"
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "project": {
+        "name": "sgi.ctm.finances.ng.frontend"
     },
-    {
-      "project": "src/tsconfig.spec.json"
+    "apps": [{
+        "root": "src",
+        "outDir": "dist",
+        "assets": [
+            "assets",
+            "favicon.ico"
+        ],
+        "index": "index.html",
+        "main": "main.ts",
+        "polyfills": "polyfills.ts",
+        "test": "test.ts",
+        "tsconfig": "tsconfig.app.json",
+        "testTsconfig": "tsconfig.spec.json",
+        "prefix": "app",
+        "styles": [
+            "styles.css",
+            "../node_modules/admin-lte/bootstrap/css/bootstrap.min.css",
+            "../node_modules/font-awesome/css/font-awesome.min.css",
+            "../node_modules/ionicons/dist/css/ionicons.min.css",
+            "../node_modules/admin-lte/dist/css/AdminLTE.min.css",
+            "../node_modules/admin-lte/dist/css/skins/_all-skins.min.css",
+            "../node_modules/admin-lte/plugins/iCheck/flat/blue.css"
+
+        ],
+        "scripts": [
+            "../node_modules/admin-lte/plugins/jQuery/jquery-2.2.3.min.js",
+            "../node_modules/admin-lte/plugins/jQueryUI/jquery-ui.min",
+            "../node_modules/admin-lte/plugins/fastclick/fastclick",
+            "../node_modules/admin-lte/plugins/slimScroll/jquery.slimscroll.min",
+            "../node_modules/admin-lte/dist/js/app.min",
+            "../node_modules/tether/dist/js/tether.js",
+            "../node_modules/admin-lte/bootstrap/js/bootstrap.js"
+        ],
+        "environmentSource": "environments/environment.ts",
+        "environments": {
+            "dev": "environments/environment.ts",
+            "prod": "environments/environment.prod.ts"
+        }
+    }],
+    "e2e": {
+        "protractor": {
+            "config": "./protractor.conf.js"
+        }
     },
-    {
-      "project": "e2e/tsconfig.e2e.json"
+    "lint": [{
+            "project": "src/tsconfig.app.json"
+        },
+        {
+            "project": "src/tsconfig.spec.json"
+        },
+        {
+            "project": "e2e/tsconfig.e2e.json"
+        }
+    ],
+    "test": {
+        "karma": {
+            "config": "./karma.conf.js"
+        }
+    },
+    "defaults": {
+        "styleExt": "css",
+        "component": {}
     }
-  ],
-  "test": {
-    "karma": {
-      "config": "./karma.conf.js"
-    }
-  },
-  "defaults": {
-    "styleExt": "css",
-    "component": {}
-  }
 }
